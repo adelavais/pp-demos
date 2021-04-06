@@ -32,11 +32,11 @@ main = do
 
 -- Listele sunt omogene (toate elementele au acelasi tip)
 -- Diverse moduri de a genera liste [1,3,5]
-	print $ 1 : 3 : 5 : []
 	print $ [1, 3, 5]
-	print $ [1, 3 .. 6]
+	print $ 1 : 3 : 5 : []
 	print $ [1, 3 .. 5]
-
+	print $ [1, 3 .. 6]
+	
 -- : operatorul cons
 -- ++ operatorul de concatenare
 	print $ 1 : [2,3]
@@ -56,6 +56,7 @@ main = do
 	print $ mypred [1,2,3,4,5]
 
 -- Tupluri -> sintaxa cu paranteze rotunde (la liste este cu paranteze patrate)
+	print $ ("Hello", True, 2)
 	print $ fst ("Hello", True)  -- "Hello"
 	print $ snd ("Hello", True)  -- True
 
@@ -68,7 +69,7 @@ main = do
 	print $ zip [1, 2] [3, 4]                  -- [(1, 3), (2, 4)]
 	print $ zipWith (+) [1, 2] [3, 4]          -- [4, 6]
 
--- Functia primita de foldl si foldr are o ordine a parametrilod diferita 
+-- Functia primita de foldl si foldr are o ordine a parametrilor diferita 
 	print $ foldr (\e acc -> e : acc) [] [1,2,3,4] -- [1,2,3,4]
 	print $ foldl (\acc e -> e : acc) [] [1,2,3,4] -- [4,3,2,1]
 	
@@ -106,5 +107,5 @@ factorial_pm x = x * factorial_pm (x - 1)
 
 square x = x * x
 inc x = x + 1
-my_point_free_func = inc . square
+my_point_free_func = inc . square -- inc(square(x))
 --------------------------------------------------------------------
