@@ -89,7 +89,6 @@ main = do
 -- Point free functions
 	print $ my_point_free_func 5 -- 26
 
-
 --------------------------------------------------------------------
 mypred l = not (null l) &&  elem 3 l && notElem 5 l
 
@@ -108,7 +107,6 @@ factorial_pm x = x * factorial_pm (x - 1)
 
 factorial_pm_tail 0 acc = acc
 factorial_pm_tail x acc = factorial_pm_tail (x - 1) (acc * x)
-
 
 
 square x = x * x
