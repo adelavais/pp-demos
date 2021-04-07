@@ -84,10 +84,11 @@ main = do
 	print $ factorial_guards 5
 	print $ factorial_case 5
 	print $ factorial_pm 5
+	print $ factorial_pm_tail 5 1
 
 -- Point free functions
 	print $ my_point_free_func 5 -- 26
-	
+
 
 --------------------------------------------------------------------
 mypred l = not (null l) &&  elem 3 l && notElem 5 l
@@ -105,7 +106,13 @@ factorial_case x = case x < 1 of
 factorial_pm 0 = 1
 factorial_pm x = x * factorial_pm (x - 1)
 
+factorial_pm_tail 0 acc = acc
+factorial_pm_tail x acc = factorial_pm_tail (x - 1) (acc * x)
+
+
+
 square x = x * x
 inc x = x + 1
-my_point_free_func = inc . square -- inc(square(x))
+
+my_point_free_func = inc . square . (2 +) -- inc(square(2+x))
 --------------------------------------------------------------------
