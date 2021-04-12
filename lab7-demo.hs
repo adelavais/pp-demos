@@ -136,6 +136,19 @@ f = MakeFahrenheit 5.0
 celsiusToFahrenheit :: Celsius -> Fahrenheit
 celsiusToFahrenheit (MakeCelsius c) = MakeFahrenheit $ c * 9/5 + 32
 
+-- sintaxă de pattern matching pentru constructori
+
+data MyData = D
+  { d1 :: Double
+  , d2 :: Double
+  , d3 :: Double
+  } deriving (Show, Eq)
+
+sumD (D x y z) = x + y + z
+prodD (D x y z) = x * y * z
+
+sum_prodD d@(D x y z) = D (x / prod) (y / prod) (z / prod)
+  where prod = prodD d
 
 main = do
     print p
@@ -152,3 +165,5 @@ main = do
     print f
     -- print $ MakeFahrenheit c - eroare
     print $ celsiusToFahrenheit c
+    print $ sumD (D 1.0 2.0 3.0)
+    print $ sum_prodD (D 1.0 2.0 3.0)
