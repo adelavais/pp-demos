@@ -47,6 +47,10 @@ compilarea terminându-se cu succes doar când acestea corespund. Sinteza
 este efectuată pe tipuri de date oricât de complexe, astfel că, de exemplu,
 o expresie expr având tipul:
 
+nume :: tipul
+nume :: p1 -> p3 ... -> pn -> val ret
+nume :: constrangeri despre urm param => p1 -> p2 -> .... -> val retur
+
 expr :: [(a,Int)]
 
 va fi verificată în adâncime, de la „rădăcină” (tipul listă) către „frunze”
@@ -115,7 +119,7 @@ data Natural = Zero | Succ Natural deriving Show
 
 -- newtype
 -- similară cu `data`
--- cu diferența că ne permite crearea unui tip de date cu un singur constructor
+-- cu diferența că ne permite crearea unui tip de date cu un singur constructor pe un singur argument
 -- pe baza altor tipuri de date existente
 -- spre deosebire de `type`, creează un nou tip, nu un tip identic
 
