@@ -60,7 +60,7 @@ va fi verificată în adâncime, de la „rădăcină” (tipul listă) către �
 
 -- Tipuri de date definite de utilizator
 
--- type - similar cu typedef din C
+-- type - similar cu typedef din C, using din C++, alias din D
 -- ne permite definirea unui sinonim de tip
 type Point = (Int, Int)
 p :: Point
