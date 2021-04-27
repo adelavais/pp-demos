@@ -117,8 +117,9 @@ true. % 3 este evaluarea expresiei 1 + 2? DA
 returnFirst([PrimulElem | RestulElementelor], Rezultat):- Rezultat is PrimulElem.
 % ?- returnFirst([1,2,3,4], R).
 % R = 1.
+returnFirstv2([PrimulElem | RestulElementelor], PrimulElem).
 
-returnFifth([Unu, Doi, Trei, Patru, Cinci|Restul], R):- R is Cinci, write(Restul).
+returnFifth([Unu, Doi, Trei, Patru, Cinci|Restul], Cinci):- write(Restul).
 /*
 era scris mai corect daca in locul variabilelor nefolosite puneam _
 
