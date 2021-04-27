@@ -180,7 +180,7 @@ treeMap f (Node info l r) = Node (f info) (treeMap f l) (treeMap f r)
 -- data Maybe a = Nothing | Just a
 --   map :: (a -> b) -> [a] -> [b]
 maybeMap :: (a -> b) -> Maybe a -> Maybe b
-maybeMap f Nothing = Nothing
+maybeMap _ Nothing = Nothing
 maybeMap f (Just x) = Just (f x)
 
 {-
@@ -196,7 +196,7 @@ class MyFunctor container where
     myfmap :: (a -> b) -> container a -> container b
 
 instance MyFunctor BST where
-   myfmap - Empty = Empty
+   myfmap _ Empty = Empty
    myfmap f (Node a l r) = Node (f a) (myfmap f l) (myfmap f r)
 
 {-
