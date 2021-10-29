@@ -31,7 +31,7 @@ main = do
 -}
 
 -- Listele sunt omogene (toate elementele au acelasi tip)
--- Diverse moduri de a genera liste [1,3,5]
+-- Diverse moduri de a genera lista [1,3,5]
     print $ [1, 3, 5]
     print $ 1 : 3 : 5 : []
     print $ [1, 3 .. 5]
@@ -42,7 +42,7 @@ main = do
     print $ 1 : [2,3]
     print $ [1] ++ [2,3]
 
--- head si tail sunt echivalantele pentru car si cdr
+-- head si tail sunt echivalentele pentru car si cdr
     print $ head [1, 2, 3] -- 1
     print $ tail [1, 2, 3] -- [2, 3]
 
@@ -50,7 +50,7 @@ main = do
     print $ last [1, 2, 3] -- 3
     print $ init [1, 2, 3] -- [1, 2]
 
--- vreau sa imi creez un predicat care sa imi faca 3 verificari:
+-- vreau sa creez un predicat care sa faca 3 verificari:
 -- lista sa nu fie nula, 3 sa fie element al acesteia si 5 sa nu fie
 -- mypred L = not null L &&  elem 3 L && notElem 5 L
     print $ mypred [1,2,3,4,5]

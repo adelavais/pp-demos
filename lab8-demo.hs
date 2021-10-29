@@ -83,7 +83,7 @@ instance Eq Person where
 => modularitate mai bună
 - putem înrola tipuri create anterior în alte biblioteci în clase proaspăt create
   de noi
-- putem defini multiple implementări ale unei clase pentru un acelasi tip de date
+- putem defini multiple implementări ale unei clase pentru un același tip de date
   în module diferite și să importăm doar implementarea care ne interesează într-un
   anumit caz (însă acest lucru nu este recomandat)
 -}

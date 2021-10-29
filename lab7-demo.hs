@@ -65,7 +65,7 @@ va fi verificată în adâncime, de la „rădăcină” (tipul listă) către �
 type Point = (Int, Int)
 p :: Point
 p = (2, 3)
--- se face o echivalență internă între contructorul perechii și Point
+-- se face o echivalență internă între constructorul perechii și Point
 -- p = (2.0, 3.0) -- eroare, primește Double, nu Int
 
 -- data - permite definirea de noi tipuri de date algebrice
