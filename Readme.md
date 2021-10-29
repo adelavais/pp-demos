@@ -1,4 +1,6 @@
-# Demo-uri pentru laboratoarele de PP
+# Demo-uri pentru laboratoarele de PP din anul universitar 2020-2021
+
+[Instanța de OCW](https://ocw.cs.pub.ro/courses/pp)
 
 ## Racket
 - Lab 2 Recursivitate
@@ -13,5 +15,8 @@
 
 ## Prolog
 - Lab 9 Introducere
+- Lab 10 Legare și execuție
+- Lab 11 Probleme de căutare în spaţiul stărilor
+- Lab 12 Probleme
 
 Pentru orice sugestii: pull request sau mail.
